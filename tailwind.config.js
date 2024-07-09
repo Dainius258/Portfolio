@@ -2,8 +2,14 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#142850",
+        secondary: "#27496D",
+        tertiary: "#0C7B93",
+        fourth: "#00A8CC",
+      },
+    },
   },
   plugins: [],
-}
-
+};
