@@ -3,6 +3,9 @@ export default {
   content: [],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Montserrat", "sans-serif"],
+      },
       colors: {
         primary: "#142850",
         secondary: "#27496D",
