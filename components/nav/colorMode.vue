@@ -3,7 +3,7 @@
         <div class="size-10 mb-3">
           <transition name="fade" mode="out-in">
               <Icon 
-              v-if="colorMode === 'light'"
+              v-if="colorMode.preference === 'dark'"
               class="mt-1 size-10 text-yellow-100 hover:text-yellow-300 transition-colors duration-200 ease-in-out" 
               name="mdi:lightbulb-on-90" 
               key="light"
@@ -21,11 +21,12 @@
 
 <script setup>
 // mdi:lightbulb-on-90 mdi:weather-night
-const selectedIcon = ref('mdi:lightbulb-on-90')
-const colorMode = ref('light')
+const colorMode = useColorMode()
+const selectedIcon = ref(colorMode.preference === 'dark' ? 'mdi:lightbulb-on-90' : 'mdi:weather-night')
 
 const switchColorMode = () => {
-  colorMode.value = colorMode.value === 'light' ? 'dark' : 'light'
+  colorMode.preference = colorMode.preference === 'light' ? 'dark' : 'light'
+  console.log(colorMode.preference);
 }
 </script>
 

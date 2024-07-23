@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@iconify-json/flag": "^1.1.53",
-    "@iconify-json/mdi": "^1.1.67"
+    "@iconify-json/mdi": "^1.1.67",
+    "@nuxtjs/color-mode": "^3.4.2"
   }
 }
