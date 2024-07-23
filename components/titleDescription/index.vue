@@ -8,7 +8,7 @@
             </button>
         </div>
         <!-- Description -->
-        <p class="mt-4 text-3xl">A third year computer science student and a full-stack developer from Lithuania with a strong focus on back-end development. </p>
+        <p class="mt-4 text-3xl">Full-stack developer. Third year computer science student.</p>
     </div>
 </template>
 
