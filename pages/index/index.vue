@@ -1,7 +1,11 @@
 <template>
-  <div class="bg-primary size-full flex justify-center">
+  <div class="bg-primary size-full flex flex-col">
+    <div class="flex flex-col items-center">
         <Nav class="mt-5"></Nav>
-    <p class="mt-40">{{ $t('test') }}</p>
+        <main class=" w-5/12">
+        <Hero class="mt-5"></Hero>
+        </main>
+    </div>
   </div>
 </template>
 
