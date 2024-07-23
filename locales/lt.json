@@ -1,3 +1,13 @@
 {
-    "test": "tai yra testas"  
+    "test": "Tai yra testas",
+    "nav": {
+        "lithuanian": "Lietuvių",
+        "english": "Anglų",
+        "home": "Pagrindinis",
+        "about": "Apie mane",
+        "expierence": "Patirtis",
+        "projects": "Projektai",
+        "contact": "Kontaktai",
+        "hobby_projects": "Pomėgių projektai"
+    }
 }
