@@ -16,5 +16,9 @@
     "@venegrad/vue3-click-outside": "^1.0.1",
     "nuxt": "^3.12.3",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "@iconify-json/flag": "^1.1.53",
+    "@iconify-json/mdi": "^1.1.67"
   }
 }
