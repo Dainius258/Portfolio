@@ -5,22 +5,64 @@
         <main class="w-5/12 flex flex-col items-center">
         <TitleDescription class="mt-10"></TitleDescription>
         <div class=" my-10 h-16 border-l-2 border-fourth"></div>
-        <h1 class="mt-2 text-4xl" >About me</h1>
-        <p class="mt-5 text-xl">Good evening, I am a passionate full-stack developer who is looking to hone his skills and develop intuitive, beautiful and most importantly secure applications. Currently I am studying in my third year at Klaipėdos valstybinė kolegija / Higher education institution. 
-          <br> <br> I learned a lot during study years by doing multiple projects. I did not hold back to take on completely new things by myself or with my colleagues and I developed projects using Node, Express, Android Studio, Docker and so on. 
-          <br> <br> Developed in an agile environment and I know basics of it and so the importance of communication, teamwork and taking the initiative to succesfully deliver a result.
-          <br> <br> In my leisure time I enjoy playing video games, fishing, watching videos on youtube and sometimes learning new things such as video editing, Blender, Unreal Engine or modding games in general. 
-          </p>
+        <h1 class="mt-2 text-4xl" >{{ $t('about.title') }}</h1>
+        <p class="mt-5 text-xl">
+          {{greeting}},
+          {{ $t('about.description.first') }} <br><br> 
+          {{ $t('about.description.second') }} <br><br> 
+          {{ $t('about.description.third') }} <br><br> 
+          {{ $t('about.description.fourth') }} </p>
           <div class=" my-10 h-16 border-l-2 border-fourth"></div>
-        <h1 class="mt-2 text-4xl" >My skills</h1>
+        <h1 class="mt-2 text-4xl" >{{$t('skills.title')}}</h1>
         <MarqueeSkills :skillsArray="skills" class="mt-5"/>
+        <h1 class="mt-10 text-4xl" >{{$t('projects.title')}}</h1>
+        <Card class="mt-5" v-for="project in projects" :key="project" :title="project.title" :description="project.description"/>
         </main>
     </div>
   </div>
 </template>
 
 <script setup>
-const { locale } = useI18n()
+
+const { locale, getLocaleCookie } = useI18n()
+const greeting = ref("");
+
+
+onMounted(() => {
+  if (typeof window !== 'undefined') {
+    const hour = new Date().getHours()
+    if (hour < 12) {
+      greeting.value = getLocaleCookie() === 'lt-LT' ? 'Labas rytas' : 'Good morning'
+    } else if (hour < 18) {
+      greeting.value = getLocaleCookie() === 'lt-LT' ? 'Laba diena' : 'Good afternoon'
+    } else {
+      greeting.value = getLocaleCookie() === 'lt-LT' ? 'Labas vakaras' : 'Good evening'
+    }
+  }
+})
+
+const projects = ref([
+    {
+        title: "Project 1",
+        description: "This is a project description"
+    },
+    {
+        title: "Project 2",
+        description: "This is a project description"
+    },
+    {
+        title: "Project 3",
+        description: "This is a project description"
+    },
+    {
+        title: "Project 4",
+        description: "This is a project description"
+    },
+    {
+        title: "Project 5",
+        description: "This is a project description"
+    },
+])
 
 const skills = ref([
     "JavaScript",
@@ -36,5 +78,6 @@ const skills = ref([
     "Docker",
     "Blender",
 ])
+
 </script>
 

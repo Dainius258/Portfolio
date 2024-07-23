@@ -9,5 +9,23 @@
         "projects": "Projects",
         "contact": "Contact",
         "hobby_projects": "Hobby Projects"
+    },
+    "name": {
+        "description": "Full-stack developer. Third year computer science student."
+    },
+    "about": {
+        "title": "About me",
+        "description": {
+            "first": "I am a passionate full-stack developer who is looking to hone his skills and develop intuitive, beautiful and most importantly secure applications. Currently I am studying in my third year at Klaipėdos valstybinė kolegija / Higher education institution.",
+            "second": "I learned a lot during study years by doing multiple projects. I did not hold back to take on completely new things by myself or with my colleagues and I developed projects using Node, Express, Android Studio, Docker and so on.",
+            "third": "Developed in an agile environment and I know basics of it and so the importance of communication, teamwork and taking the initiative to succesfully deliver a result.",
+            "fourth": "In my leisure time I enjoy playing video games, fishing, watching videos on youtube and sometimes learning new things such as video editing, Blender, Unreal Engine or modding games in general." 
+        }
+    },
+    "skills": {
+        "title": "Skills"
+    },
+    "projects": {
+        "title": "Projects"
     }
 }

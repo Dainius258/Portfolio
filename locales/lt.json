@@ -9,5 +9,23 @@
         "projects": "Projektai",
         "contact": "Kontaktai",
         "hobby_projects": "Pomėgių projektai"
+    },
+    "name": {
+        "description": "„Full-stack“ programuotojas. Trečio kurso informatikos studentas."
+    },
+    "about": {
+        "title": "Apie mane",
+        "description": {
+            "first": "aš esu „full-stack“ programuotojas, siekiantis tobulinti savo įgūdžius ir kurti intuityvias, gražias ir svarbiausia - saugias aplikacijas. Šiuo metu esu trečio kurso informatikos studentas Klaipėdos valstybinėje kolegijoje.",
+            "second": "Studijų metais daug išmokau atlikdamas įvairius projektus. Nebijojau imtis visiškai naujų dalykų tiek vienas, tiek su kolegomis ir kūriau projektus naudodamas Node, Express, Android Studio, Docker ir kitus įrankius.",
+            "third": "Dirbau „agile“ aplinkoje ir žinau jos pagrindus bei komunikacijos, komandinio darbo ir iniciatyvos svarbą sėkmingui rezultatui pasiekti.",
+            "fourth": "Laisvalaikiu mėgstu žaisti vaizdo žaidimus, žvejoti, žiūrėti vaizdo įrašus „YouTube“ ir kartais mokytis naujų dalykų, tokių kaip vaizdo redagavimo, Blender, Unreal Engine arba žaidimų modifikavimo." 
+        }
+    },
+    "skills": {
+        "title": "Įgūdžiai"
+    },
+    "projects": {
+        "title": "Projektai"
     }
 }

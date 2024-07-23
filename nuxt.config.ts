@@ -7,8 +7,14 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxt/icon",
     '@nuxtjs/color-mode',
-    "nuxt-marquee"
+    "nuxt-marquee",
+    '@primevue/nuxt-module'
   ],
+  primevue: {
+    options: {
+        unstyled: true
+    }
+  },
   i18n: {
     lazy: true,
     langDir: "locales",

@@ -8,10 +8,10 @@
             </button>
         </div>
         <!-- Description -->
-        <p class="mt-4 text-3xl">Full-stack developer. Third year computer science student.</p>
+        <p class="mt-4 text-3xl">{{$t('name.description')}}</p>
     </div>
 </template>
 
 <script setup>
-
+const { locale } = useI18n()
 </script>
