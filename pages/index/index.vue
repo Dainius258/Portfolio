@@ -52,6 +52,17 @@ onMounted(() => {
   }
 })
 
+const experience = ref([
+  {
+    title: "Frontend Developer",
+    description: "lorem ipsum",
+  },
+  {
+    title: "Backend Developer",
+    description: "lorem ipsum",
+  }
+])
+
 const projects = ref([
   {
     title: "Project 1",
