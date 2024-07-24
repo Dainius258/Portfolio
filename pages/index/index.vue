@@ -1,11 +1,13 @@
 <template>
   <div class="bg-primary size-full flex flex-col text-white">
     <div class="flex flex-col items-center">
-        <Nav class="mt-6"></Nav>
+        <div class="sticky top-0 z-10">
+          <Nav class="mt-6"></Nav>
+        </div>
         <main class="w-6/12 flex flex-col items-center">
         <TitleDescription class="mt-10"></TitleDescription>
-        <div class=" my-10 h-16 border-l-2 border-fourth"></div>
-        <h1 class="mt-2 text-4xl" >{{ $t('about.title') }}</h1>
+        <!-- <div class=" my-10 h-16 border-l-2 border-fourth"></div> -->
+        <h1 class="mt-10 text-4xl" >{{ $t('about.title') }}</h1>
         <p class="mt-5 text-xl">
           {{greeting}},
           {{ $t('about.description.first') }} <br><br> 
@@ -16,7 +18,15 @@
         <h1 class="mt-2 text-4xl" >{{$t('skills.title')}}</h1>
         <MarqueeSkills :skillsArray="skills" class="mt-5"/>
         <h1 class="mt-10 text-4xl" >{{$t('projects.title')}}</h1>
-        <ItemCard v-animateonscroll="{ enterClass: 'animate-scalein', leaveClass: 'animate-scaleout' }" class="mt-5" v-for="project in projects" :key="project" :title="project.title" :description="project.description"/>
+        <ItemCard 
+        v-animateonscroll="{ enterClass: 'animate-scalein', leaveClass: 'animate-scaleout' }" 
+        class="mt-5" 
+        v-for="project in projects" 
+        :key="project" 
+        :title="project.title" 
+        :description="project.description"
+        :tags="project.tags"
+        />
         <div class=" my-10 h-16 border-l-2 border-fourth"></div>
         </main>
     </div>
@@ -28,7 +38,6 @@ import AnimateOnScroll from 'primevue/animateonscroll';
 
 const { locale, getLocaleCookie } = useI18n()
 const greeting = ref("");
-
 
 onMounted(() => {
   if (typeof window !== 'undefined') {
@@ -46,7 +55,8 @@ onMounted(() => {
 const projects = ref([
   {
     title: "Project 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
+    tags: ["JavaScript", "Vue.js", "Node.js", "MongoDB"]
   },
   {
     title: "Project 2",

@@ -1,5 +1,5 @@
 <template>
-    <div class="text-white">
+    <div class="text-white w-full">
         <!-- Name with links -->
         <div class="flex flex-row">
             <h1 class=" font-bold text-5xl">Dainius Juška</h1>
