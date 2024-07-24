@@ -2,7 +2,7 @@
   <div class="bg-primary size-full flex flex-col text-white">
     <div class="flex flex-col items-center">
         <Nav class="mt-6"></Nav>
-        <main class="w-5/12 flex flex-col items-center">
+        <main class="w-6/12 flex flex-col items-center">
         <TitleDescription class="mt-10"></TitleDescription>
         <div class=" my-10 h-16 border-l-2 border-fourth"></div>
         <h1 class="mt-2 text-4xl" >{{ $t('about.title') }}</h1>
@@ -16,13 +16,15 @@
         <h1 class="mt-2 text-4xl" >{{$t('skills.title')}}</h1>
         <MarqueeSkills :skillsArray="skills" class="mt-5"/>
         <h1 class="mt-10 text-4xl" >{{$t('projects.title')}}</h1>
-        <Card class="mt-5" v-for="project in projects" :key="project" :title="project.title" :description="project.description"/>
+        <ItemCard v-animateonscroll="{ enterClass: 'animate-scalein', leaveClass: 'animate-scaleout' }" class="mt-5" v-for="project in projects" :key="project" :title="project.title" :description="project.description"/>
+        <div class=" my-10 h-16 border-l-2 border-fourth"></div>
         </main>
     </div>
   </div>
 </template>
 
 <script setup>
+import AnimateOnScroll from 'primevue/animateonscroll';
 
 const { locale, getLocaleCookie } = useI18n()
 const greeting = ref("");
@@ -42,26 +44,26 @@ onMounted(() => {
 })
 
 const projects = ref([
-    {
-        title: "Project 1",
-        description: "This is a project description"
-    },
-    {
-        title: "Project 2",
-        description: "This is a project description"
-    },
-    {
-        title: "Project 3",
-        description: "This is a project description"
-    },
-    {
-        title: "Project 4",
-        description: "This is a project description"
-    },
-    {
-        title: "Project 5",
-        description: "This is a project description"
-    },
+  {
+    title: "Project 1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
+  },
+  {
+    title: "Project 2",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
+  },
+  {
+    title: "Project 3",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
+  },
+  {
+    title: "Project 4",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
+  },
+  {
+    title: "Project 5",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
+  },
 ])
 
 const skills = ref([
@@ -80,4 +82,34 @@ const skills = ref([
 ])
 
 </script>
+
+<style scoped>
+@keyframes scalein {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scalein {
+  animation-name: scalein;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.animate-scaleout {
+  animation-name: scalein;
+  animation-direction: reverse;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+</style>
 

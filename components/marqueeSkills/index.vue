@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-row justify-center w-full">
         <NuxtMarquee  :autoFill="true" :gradient="true" :gradientColor="'#142850'">
-            <MarqueeSkillsItem class="ml-2" v-for="(skill, index) in skillsArray" :key="index" :name="skill"/>
+            <ItemTag class="ml-2" v-for="(skill, index) in skillsArray" :key="index" :name="skill"/>
         </NuxtMarquee>
     </div>
 </template>
