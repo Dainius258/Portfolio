@@ -29,7 +29,7 @@
         />
         <div class="mt-10 h-16 border-l-2 border-fourth"></div>
         <h1 class="mt-10 text-4xl" >{{$t('experience.title')}}</h1>
-        <TimelineExpierence class="mt-5 mb-10" :experience="experience"/>
+        <TimelineExpierence class="mt-10 mb-10" :experience="experience"/>
         </main>
     </div>
   </div>
@@ -56,26 +56,19 @@ onMounted(() => {
 
 const experience = ref([
   {
-    title: "Frontend Developer",
-    location: "Company 1",
+    title: "Informatics Student",
+    location: "Klaipėdos valstybinė kolegija / Higher Education Institution | Klaipėda, Lithuania",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
-    date: "2020 - 2021",
+    date: "2022 - Present",
     img: "/static/logo/kvk.png"
  },
   {
-    title: "Backend Developer",
-    location: "Company 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    date: "2020 - 2021",
-    img: "/static/logo/kvk.png"
+    title: "Full-stack Intern",
+    location: "Turiba University | Ryga, Latvia",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    date: "2024 May - 2024 July",
+    img: "/static/logo/tu.png"
   },
-  {
-    title: "Backend Developer",
-    location: "Company 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    date: "2020 - 2021",
-    img: "/static/logo/kvk.png"
-  }
 ])
 
 const projects = ref([
