@@ -1,7 +1,7 @@
 <template>
   <div 
     ref="card" 
-    class="scaled-element w-full rounded-xl bg-secondary p-2 transition-all duration-300 ease-in-out"
+    class="scaled-element w-full rounded-xl bg-secondary p-3 transition-all duration-300 ease-in-out"
     :class="{ 'cursor-pointer hover:bg-cyan-800': clickable }"
     :style="animate ? { '--scale': scale } : {}"
   >
