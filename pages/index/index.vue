@@ -30,6 +30,7 @@
         <div class="mt-10 h-16 border-l-2 border-fourth"></div>
         <h1 class="mt-10 text-4xl" >{{$t('experience.title')}}</h1>
         <TimelineExpierence class="mt-10 mb-10" :experience="experience"/>
+        <FormContact  class="mb-10" />
         </main>
     </div>
   </div>
