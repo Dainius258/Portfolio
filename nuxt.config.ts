@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     '@nuxtjs/color-mode',
     "nuxt-marquee",
-    '@primevue/nuxt-module'
+    '@primevue/nuxt-module',
+    "@nuxt/image"
   ],
   primevue: {
     options: {

@@ -27,5 +27,8 @@
     },
     "projects": {
         "title": "Projektai"
+    },
+    "experience": {
+        "title": "Patirtis"
     }
 }

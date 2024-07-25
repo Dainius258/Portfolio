@@ -27,7 +27,9 @@
         :description="project.description"
         :tags="project.tags"
         />
-        <div class=" my-10 h-16 border-l-2 border-fourth"></div>
+        <div class="mt-10 h-16 border-l-2 border-fourth"></div>
+        <h1 class="mt-10 text-4xl" >{{$t('experience.title')}}</h1>
+        <TimelineExpierence class="mt-5 mb-10" :experience="experience"/>
         </main>
     </div>
   </div>
@@ -55,11 +57,24 @@ onMounted(() => {
 const experience = ref([
   {
     title: "Frontend Developer",
-    description: "lorem ipsum",
+    location: "Company 1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
+    date: "2020 - 2021",
+    img: "/static/logo/kvk.png"
+ },
+  {
+    title: "Backend Developer",
+    location: "Company 1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    date: "2020 - 2021",
+    img: "/static/logo/kvk.png"
   },
   {
     title: "Backend Developer",
-    description: "lorem ipsum",
+    location: "Company 1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    date: "2020 - 2021",
+    img: "/static/logo/kvk.png"
   }
 ])
 
