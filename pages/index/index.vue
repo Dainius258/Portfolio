@@ -18,13 +18,14 @@
         <MarqueeSkills :skillsArray="skills" class="mt-5"/>
         <h1 ref="projectsSection" class="mt-10 text-4xl" >{{$t('projects.title')}}</h1>
         <ItemCard 
-        v-animateonscroll="{ enterClass: 'animate-scalein', leaveClass: 'animate-scaleout' }" 
         class="mt-5" 
         v-for="project in projects" 
         :key="project" 
         :title="project.title" 
         :description="project.description"
         :tags="project.tags"
+        :animate="true"
+        :clickable="true"
         />
         <div class="mt-10 h-16 border-l-2 border-fourth"></div>
         <h1 ref="experienceSection" class="mt-10 text-4xl" >{{$t('experience.title')}}</h1>
@@ -37,6 +38,7 @@
 
 <script setup>
 import AnimateOnScroll from 'primevue/animateonscroll';
+
 
 const { locale, getLocaleCookie } = useI18n()
 const greeting = ref("");
@@ -78,6 +80,8 @@ onMounted(() => {
     }
   }
 })
+
+
 
 const experience = ref([
   {
