@@ -2,12 +2,11 @@
   <div class="bg-primary size-full flex flex-col text-white">
     <div class="flex flex-col items-center">
         <div class="sticky top-0 z-10">
-          <Nav class="mt-6"></Nav>
+          <Nav class="mt-6" @scroll="scrollToSection"></Nav>
         </div>
         <main class="w-6/12 flex flex-col items-center">
-        <TitleDescription class="mt-10"></TitleDescription>
-        <!-- <div class=" my-10 h-16 border-l-2 border-fourth"></div> -->
-        <h1 class="mt-10 text-4xl" >{{ $t('about.title') }}</h1>
+        <TitleDescription ref="homeSection" class="mt-10"></TitleDescription>
+        <h1 ref="aboutSection" class="mt-10 text-4xl" >{{ $t('about.title') }}</h1>
         <p class="mt-5 text-xl">
           {{greeting}},
           {{ $t('about.description.first') }} <br><br> 
@@ -17,7 +16,7 @@
           <div class=" my-10 h-16 border-l-2 border-fourth"></div>
         <h1 class="mt-2 text-4xl" >{{$t('skills.title')}}</h1>
         <MarqueeSkills :skillsArray="skills" class="mt-5"/>
-        <h1 class="mt-10 text-4xl" >{{$t('projects.title')}}</h1>
+        <h1 ref="projectsSection" class="mt-10 text-4xl" >{{$t('projects.title')}}</h1>
         <ItemCard 
         v-animateonscroll="{ enterClass: 'animate-scalein', leaveClass: 'animate-scaleout' }" 
         class="mt-5" 
@@ -28,9 +27,9 @@
         :tags="project.tags"
         />
         <div class="mt-10 h-16 border-l-2 border-fourth"></div>
-        <h1 class="mt-10 text-4xl" >{{$t('experience.title')}}</h1>
+        <h1 ref="experienceSection" class="mt-10 text-4xl" >{{$t('experience.title')}}</h1>
         <TimelineExpierence class="mt-10 mb-10" :experience="experience"/>
-        <FormContact  class="mb-10" />
+        <FormContact ref="contactSection" class="mb-10" />
         </main>
     </div>
   </div>
@@ -41,6 +40,31 @@ import AnimateOnScroll from 'primevue/animateonscroll';
 
 const { locale, getLocaleCookie } = useI18n()
 const greeting = ref("");
+
+const homeSection = ref(null);
+const aboutSection = ref(null);
+const experienceSection = ref(null);
+const projectsSection = ref(null);
+const contactSection = ref(null);
+
+const scrollToSection = (section) => {
+  switch (section) {
+    case 'about':
+      aboutSection.value.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      break;
+    case 'experience':
+      experienceSection.value.scrollIntoView({behavior: 'smooth', block: 'center' });
+      break;
+    case 'projects':
+      projectsSection.value.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      break;
+    case 'contact':
+      contactSection.value.$el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      break;
+    default:
+      break;
+  }
+}
 
 onMounted(() => {
   if (typeof window !== 'undefined') {

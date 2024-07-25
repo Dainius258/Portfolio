@@ -1,11 +1,10 @@
 <template>
     <div class="bg-secondary size-fit flex flex-row rounded-full justify-between p-1 border-4 shadow-lg border-primary">
         <div class="flex flex-row justify-center">
-            <NavButton :text="$t('nav.home')" />
-            <NavButton :text="$t('nav.about')"/>
-            <NavButton :text="$t('nav.expierence')"/>
-            <NavButton :text="$t('nav.projects')"/>
-            <NavButton :text="$t('nav.contact')"/>
+            <NavButton @click="emitScrollEvent('about')"  :text="$t('nav.about')"/>
+            <NavButton @click="emitScrollEvent('experience')" :text="$t('nav.expierence')"/>
+            <NavButton @click="emitScrollEvent('projects')" :text="$t('nav.projects')"/>
+            <NavButton @click="emitScrollEvent('contact')" :text="$t('nav.contact')"/>
         </div>
         <div class="flex flex-row ml-4">
             <NavLangSwitcher/>
@@ -15,5 +14,12 @@
 </template>
 
 <script setup>
+
+const emit = defineEmits(['scroll'])
+
+const emitScrollEvent = (section) => {
+    emit('scroll', section)
+}
+
 const { locale } = useI18n()
 </script>
