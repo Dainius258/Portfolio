@@ -9,7 +9,7 @@
       <Icon class="size-7 transition-transform duration-500 ease-in-out" :class="{'rotate-180': open}" name="mdi:chevron-up" />
     </button>
     <transition name="fade">
-      <div v-if="open" class="absolute z-10 ml-2 mt-4 w-44 rounded-md shadow-lg bg-secondary">
+      <div v-if="open" class="absolute z-10 ml-2 mt-4 w-44 rounded-md shadow-lg border-2 border-primary bg-secondary">
         <div class="py-1">
           <button @click="selectLanguage('English', 'flag:gb-4x3')" class= "block w-full text-left px-4 py-2 text-sm text-white hover:bg-tertiary hover:text-cyan-300">
             {{ $t('nav.english') }} <Icon name="flag:gb-4x3" />
