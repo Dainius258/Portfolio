@@ -5,32 +5,45 @@
           <Nav class="mt-6" @scroll="scrollToSection"></Nav>
         </div>
         <main class="w-6/12 flex flex-col items-center">
-        <TitleDescription ref="homeSection" class="mt-10"></TitleDescription>
-        <h1 ref="aboutSection" class="mt-10 text-4xl" >{{ $t('about.title') }}</h1>
-        <p class="mt-5 text-xl">
-          {{greeting}},
-          {{ $t('about.description.first') }} <br><br> 
-          {{ $t('about.description.second') }} <br><br> 
-          {{ $t('about.description.third') }} <br><br> 
-          {{ $t('about.description.fourth') }} </p>
-          <div class=" my-10 h-16 border-l-2 border-fourth"></div>
+        <TitleDescription class="mt-10"></TitleDescription>
+        <!-- About -->
+        <div ref="aboutSection" id="about" class="flex flex-col items-center">
+          <h1 class="mt-10 text-4xl" >{{ $t('about.title') }}</h1>
+          <p class="mt-5 text-xl">
+            {{greeting}},
+            {{ $t('about.description.first') }} <br><br> 
+            {{ $t('about.description.second') }} <br><br> 
+            {{ $t('about.description.third') }} <br><br> 
+            {{ $t('about.description.fourth') }} </p>
+            <div class=" my-10 h-16 border-l-2 border-fourth"></div>
+        </div>
+        <!-- Skills -->
         <h1 class="mt-2 text-4xl" >{{$t('skills.title')}}</h1>
         <MarqueeSkills :skillsArray="skills" class="mt-5"/>
-        <h1 ref="projectsSection" class="mt-10 text-4xl" >{{$t('projects.title')}}</h1>
-        <ItemCard 
-        class="mt-5" 
-        v-for="project in projects" 
-        :key="project" 
-        :title="project.title" 
-        :description="project.description"
-        :tags="project.tags"
-        :animate="true"
-        :clickable="true"
-        />
+        <!-- Projects -->
+        <div ref="projectsSection" id="projects" class="flex flex-col items-center">
+          <h1 class="mt-10 text-4xl" >{{$t('projects.title')}}</h1>
+          <ItemCard 
+          class="mt-5" 
+          v-for="project in projects" 
+          :key="project" 
+          :title="project.title" 
+          :description="project.description"
+          :tags="project.tags"
+          :animate="true"
+          :clickable="true"
+          />
+        </div>
         <div class="mt-10 h-16 border-l-2 border-fourth"></div>
-        <h1 ref="experienceSection" class="mt-10 text-4xl" >{{$t('experience.title')}}</h1>
-        <TimelineExpierence class="mt-10 mb-10" :experience="experience"/>
-        <FormContact ref="contactSection" class="mb-10" />
+        <!-- Experience -->
+        <div ref="experienceSection" id="experience" class="flex flex-col items-center  mb-10">
+          <h1  class="mt-10 text-4xl" >{{$t('experience.title')}}</h1>
+          <TimelineExpierence class="mt-10" :experience="experience"/>
+        </div>
+        <!-- Contact -->
+        <div id="contact" class="mt-28 mb-28">
+          <FormContact ref="contactSection" class="mb-10"  />
+        </div>
         </main>
     </div>
   </div>
@@ -39,15 +52,14 @@
 <script setup>
 import AnimateOnScroll from 'primevue/animateonscroll';
 
-
 const { locale, getLocaleCookie } = useI18n()
 const greeting = ref("");
 
-const homeSection = ref(null);
 const aboutSection = ref(null);
 const experienceSection = ref(null);
 const projectsSection = ref(null);
 const contactSection = ref(null);
+
 
 const scrollToSection = (section) => {
   switch (section) {
@@ -102,24 +114,20 @@ const experience = ref([
 
 const projects = ref([
   {
-    title: "Project 1",
+    title: "Job Listings Portal",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
     tags: ["JavaScript", "Vue.js", "Node.js", "MongoDB"]
   },
   {
-    title: "Project 2",
+    title: "Smart Home System Selection Quiz",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
   },
   {
-    title: "Project 3",
+    title: "Recipe Mobile Application",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
   },
   {
-    title: "Project 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
-  },
-  {
-    title: "Project 5",
+    title: "Scrolle Learning Management System",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
   },
 ])
