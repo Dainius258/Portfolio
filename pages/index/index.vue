@@ -52,7 +52,7 @@
 <script setup>
 import AnimateOnScroll from 'primevue/animateonscroll';
 
-const { locale, getLocaleCookie } = useI18n()
+const { locale, getLocaleCookie, t } = useI18n()
 const greeting = ref("");
 
 const aboutSection = ref(null);
@@ -97,38 +97,38 @@ onMounted(() => {
 
 const experience = ref([
   {
-    title: "Informatics Student",
-    location: "Klaipėdos valstybinė kolegija / Higher Education Institution | Klaipėda, Lithuania",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
-    date: "2022 - Present",
+    title: t('experience.college.title'),
+    location: t('experience.college.location'),
+    description: t('experience.college.description'),
+    date: t('experience.college.date'),
     img: "/static/logo/kvk.png"
  },
   {
-    title: "Full-stack Intern",
-    location: "Turiba University | Ryga, Latvia",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    date: "2024 May - 2024 July",
+    title: t('experience.turiba.title'),
+    location: t('experience.turiba.location'),
+    description: t('experience.turiba.description'),
+    date: t('experience.turiba.date'),
     img: "/static/logo/tu.png"
   },
 ])
 
 const projects = ref([
   {
-    title: "Job Listings Portal",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
+    title: t('projects.jobPortal.title'),
+    description: t('projects.jobPortal.description'),
     tags: ["JavaScript", "Vue.js", "Node.js", "MongoDB"]
   },
   {
-    title: "Smart Home System Selection Quiz",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
+    title: t('projects.smartHome.title'),
+    description: t('projects.smartHome.description'),
   },
   {
-    title: "Recipe Mobile Application",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
+    title: t('projects.recipeApp.title'),
+    description: t('projects.recipeApp.description'),
   },
   {
-    title: "Scrolle Learning Management System",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc."
+    title: t('projects.scrolle.title'),
+    description: t('projects.scrolle.description'),
   },
 ])
 

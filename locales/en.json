@@ -26,9 +26,37 @@
         "title": "Skills"
     },
     "projects": {
-        "title": "Projects"
+        "title": "Projects",
+        "jobPortal": {
+            "title": "Job Listings Portal",
+            "description": "A job portal where you can find a job or post a job. You can also apply for a job and see your applications. The project was developed using Node.js, Express.js, MongoDB, EJS, Bootstrap, Docker and Docker Compose."
+        },
+        "smartHome": {
+            "title": "Smart Home System Solutions App",
+            "description": "A job portal where you can find a job or post a job. You can also apply for a job and see your applications. The project was developed using Node.js, Express.js, MongoDB, EJS, Bootstrap, Docker and Docker Compose."
+        },
+        "recipeApp": {
+            "title": "Recipe App",
+            "description": "A job portal where you can find a job or post a job. You can also apply for a job and see your applications. The project was developed using Node.js, Express.js, MongoDB, EJS, Bootstrap, Docker and Docker Compose."
+        },
+        "scrolle": {
+            "title": "Learning Management System „Scrolle“",
+            "description": "A job portal where you can find a job or post a job. You can also apply for a job and see your applications. The project was developed using Node.js, Express.js, MongoDB, EJS, Bootstrap, Docker and Docker Compose."
+        }
     },
     "experience": {
-        "title": "Experience"
+        "title": "Experience",
+        "college": {
+            "title": "Informatics Student",
+            "location": "Klaipėdos valstybinė kolegija / Higher Education Institution. Klaipėda, Lithuania",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
+            "date": "2022 - Present"
+        },
+        "turiba": {
+            "title": "3 Month Internship Abroad",
+            "location": "Turiba University. Riga, Latvia",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
+            "date": "May - July 2024"
+        }
     }
 }
