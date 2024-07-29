@@ -1,30 +1,30 @@
 <template>
   <div class="bg-primary size-full flex flex-col text-white">
     <div class="flex flex-col items-center">
-        <div class="sticky top-0 z-10">
-          <Nav class="mt-6" @scroll="scrollToSection"></Nav>
-        </div>
+        <header class="sticky top-0 z-10">
+          <Nav class="mt-12" @scroll="scrollToSection"></Nav>
+        </header>
         <main class="w-6/12 flex flex-col items-center">
-        <TitleDescription class="mt-10"></TitleDescription>
+        <TitleDescription class="mt-16"></TitleDescription>
         <!-- About -->
         <div ref="aboutSection" id="about" class="flex flex-col items-center">
-          <h1 class="mt-10 text-4xl" >{{ $t('about.title') }}</h1>
-          <p class="mt-5 text-xl">
+          <h1 class="mt-16 text-4xl" >{{ $t('about.title') }}</h1>
+          <p class="mt-10 text-xl">
             {{greeting}},
             {{ $t('about.description.first') }} <br><br> 
             {{ $t('about.description.second') }} <br><br> 
             {{ $t('about.description.third') }} <br><br> 
             {{ $t('about.description.fourth') }} </p>
-            <div class=" my-10 h-16 border-l-2 border-fourth"></div>
+            <div class="mt-16 h-16 border-l-2 border-fourth"></div>
         </div>
         <!-- Skills -->
-        <h1 class="mt-2 text-4xl" >{{$t('skills.title')}}</h1>
-        <MarqueeSkills :skillsArray="skills" class="mt-5"/>
+        <h1 class="mt-16 text-4xl" >{{$t('skills.title')}}</h1>
+        <MarqueeSkills :skillsArray="skills" class="mt-10"/>
         <!-- Projects -->
         <div ref="projectsSection" id="projects" class="flex flex-col items-center">
-          <h1 class="mt-10 text-4xl" >{{$t('projects.title')}}</h1>
+          <h1 class="mt-16 text-4xl" >{{$t('projects.title')}}</h1>
           <ItemCard 
-          class="mt-5" 
+          class="mt-6" 
           v-for="project in projects" 
           :key="project" 
           :title="project.title" 
@@ -34,10 +34,10 @@
           :clickable="true"
           />
         </div>
-        <div class="mt-10 h-16 border-l-2 border-fourth"></div>
+        <div class="mt-16 h-16 border-l-2 border-fourth"></div>
         <!-- Experience -->
-        <div ref="experienceSection" id="experience" class="flex flex-col items-center  mb-10">
-          <h1  class="mt-10 text-4xl" >{{$t('experience.title')}}</h1>
+        <div ref="experienceSection" id="experience" class="flex flex-col items-center mt-16">
+          <h1  class="text-4xl" >{{$t('experience.title')}}</h1>
           <TimelineExpierence class="mt-10" :experience="experience"/>
         </div>
         <!-- Contact -->
