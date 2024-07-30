@@ -8,7 +8,7 @@
         <TitleDescription class="mt-16"></TitleDescription>
         <!-- About -->
         <div ref="aboutSection" id="about" class="flex flex-col items-center">
-          <h1 class="mt-16 text-4xl" >{{ $t('about.title') }}</h1>
+          <h1 class="mt-16 text-4xl font-semibold" >{{ $t('about.title') }}</h1>
           <p class="mt-10 text-xl">
             {{greeting}},
             {{ $t('about.description.first') }} <br><br> 
@@ -18,11 +18,11 @@
             <div class="mt-16 h-16 border-l-2 border-fourth"></div>
         </div>
         <!-- Skills -->
-        <h1 class="mt-16 text-4xl" >{{$t('skills.title')}}</h1>
+        <h1 class="mt-16 text-4xl font-semibold" >{{$t('skills.title')}}</h1>
         <MarqueeSkills :skillsArray="skills" class="mt-10"/>
         <!-- Projects -->
         <div ref="projectsSection" id="projects" class="flex flex-col items-center">
-          <h1 class="mt-16 text-4xl" >{{$t('projects.title')}}</h1>
+          <h1 class="mt-16 text-4xl font-semibold" >{{$t('projects.title')}}</h1>
           <ItemCard 
           class="mt-6" 
           v-for="project in projects" 
@@ -37,7 +37,7 @@
         <div class="mt-16 h-16 border-l-2 border-fourth"></div>
         <!-- Experience -->
         <div ref="experienceSection" id="experience" class="flex flex-col items-center mt-16">
-          <h1  class="text-4xl" >{{$t('experience.title')}}</h1>
+          <h1  class="text-4xl font-semibold" >{{$t('experience.title')}}</h1>
           <TimelineExpierence class="mt-10" :experience="experience"/>
         </div>
         <!-- Contact -->
