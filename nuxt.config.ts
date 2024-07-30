@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import Aura from '@primevue/themes/aura';
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -10,16 +9,8 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     '@nuxtjs/color-mode',
     "nuxt-marquee",
-    '@primevue/nuxt-module',
     "@nuxt/image"
   ],
-  primevue: {
-    options: {
-        theme: {
-            preset: Aura
-        }
-    }
-},
   i18n: {
     lazy: true,
     langDir: "locales",

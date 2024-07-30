@@ -5,6 +5,7 @@
           <Nav class="mt-12" @scroll="scrollToSection"></Nav>
         </header>
         <main class="w-6/12 flex flex-col items-center">
+        <ModalProject :project="selectedProject" @close-modal="showProjectModal=false" v-show="showProjectModal"/>
         <TitleDescription class="mt-16"></TitleDescription>
         <!-- About -->
         <div ref="aboutSection" id="about" class="flex flex-col items-center">
@@ -32,6 +33,7 @@
           :tags="project.tags"
           :animate="true"
           :clickable="true"
+          @click="openProjectModal(project.title)"
           />
         </div>
         <div class="mt-16 h-16 border-l-2 border-fourth"></div>
@@ -50,8 +52,6 @@
 </template>
 
 <script setup>
-import AnimateOnScroll from 'primevue/animateonscroll';
-
 const { locale, getLocaleCookie, t } = useI18n()
 const greeting = ref("");
 
@@ -59,6 +59,13 @@ const aboutSection = ref(null);
 const experienceSection = ref(null);
 const projectsSection = ref(null);
 const contactSection = ref(null);
+
+const showProjectModal = ref(false);
+
+const openProjectModal = (projectName) => {
+  showProjectModal.value = true;
+  selectedProject.value = projects.value.find(project => project.title === projectName);
+}
 
 
 const scrollToSection = (section) => {
@@ -116,7 +123,11 @@ const projects = ref([
   {
     title: t('projects.jobPortal.title'),
     description: t('projects.jobPortal.description'),
-    tags: ["JavaScript", "Vue.js", "Node.js", "MongoDB"]
+    tags: ["JavaScript", "Vue.js", "Node.js", "MongoDB"],
+    images: [
+      { itemImageSrc: "/static/images/jobPortal/jobPortal1.png", thumbnailImageSrc: "/static/images/jobPortal/jobPortal1.png", alt: "Job Portal", title: "Title 1" },
+      { itemImageSrc: "/static/images/jobPortal/jobPortal2.png", thumbnailImageSrc: "/static/images/jobPortal/jobPortal2.png", alt: "Job Portal", title: "Title 2"  },
+    ]
   },
   {
     title: t('projects.smartHome.title'),
@@ -131,6 +142,8 @@ const projects = ref([
     description: t('projects.scrolle.description'),
   },
 ])
+
+const selectedProject = ref(projects.value[0]);
 
 const skills = ref([
     "JavaScript",
