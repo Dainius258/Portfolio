@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     '@nuxtjs/color-mode',
     "nuxt-marquee",
-    "@nuxt/image"
+    "@nuxt/image",
+    "nuxt-swiper"
   ],
   i18n: {
     lazy: true,

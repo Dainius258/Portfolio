@@ -1,18 +1,62 @@
 <template>
-  <div class="modal-overlay z-10">
-    <div class="modal h-fit w-fit p-3 bg-secondary text-white flex flex-col">
+  <div @click="$emit('closeModal')" class="modal-overlay z-10">
+    <div class="modal h-5/6 w-6/12 p-6 bg-secondary text-white flex flex-col" @click.stop>
       <div v-if="project">
-        <h1>{{ project.title }}</h1>
-        <p v-if="project.images">Images are there</p>
-      </div>
-      <div class="flex justify-end">
-        <button @click="$emit('closeModal')" class="bg-tertiary px-4 py-1 text-white rounded-2xl text-sm transition-colors duration-300 hover:bg-fourth">Close</button>
+        <!-- Header -->
+        <div class="flex flex-row justify-between">
+          <h1 class=" text-3xl font-semibold">{{ project.title }}</h1>
+          <button @click="$emit('closeModal')" class="bg-tertiary px-4 py-1 text-white rounded-2xl text-2xl transition-colors duration-300 hover:bg-fourth">Close</button>
+        </div>
+        <!-- Images -->
+        <div v-if="project.images" class="mt-10">
+          <Swiper
+           :modules="modules"
+           navigation
+           :pagination="{ clickable: true }"
+           :slides-per-view="1"
+           :space-between="20"
+          >
+          <SwiperSlide v-for="(image, index) in project.images" :key="index">
+            <div class="flex justify-center">
+              <img
+              :src="image.itemImageSrc"
+              :alt="image.alt"
+              class="rounded-md"
+            />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+        </div>
+        <!-- Description -->
+        <div class="mt-10 text-left">
+          <h1 class="text-2xl font-semibold">Description</h1>
+          <p>{{ project.description }}</p>
+        </div>
+        <!-- Tags -->
+        <div class="flex flex-row">
+          <ItemTag v-for="(tag, index) in project.tags" :key="index" :name="tag" class="mt-4 mr-2"/>
+        </div>
+        <!-- Links -->
+        <div class="mt-10 flex flex-col items-start">
+          <h1 class="text-2xl font-semibold">Links</h1>
+            <div class="flex flex-col">
+              <p>Github</p>
+              <p>Website</p>
+            </div>
+          </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { Navigation, Pagination} from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const modules = [Navigation, Pagination];
 
 const props = defineProps({
   project: {
@@ -40,8 +84,29 @@ const visible = ref(false);
 
 .modal {
   text-align: center;
-  margin-top: 10%;
-  border-radius: 20px;
+  margin-top: 2%;
+  border-radius: 10px;
+  overflow-y: auto; 
+}
+
+/* Custom scrollbar styles */
+.modal::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: #f1f1f100;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #617fab;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #1893ac;
 }
 
 </style>
