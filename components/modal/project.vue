@@ -37,11 +37,17 @@
           <ItemTag v-for="(tag, index) in project.tags" :key="index" :name="tag" class="mt-4 mr-2"/>
         </div>
         <!-- Links -->
-        <div class="mt-10 flex flex-col items-start">
-          <h1 class="text-2xl font-semibold">Links</h1>
-            <div class="flex flex-col">
-              <p>Github</p>
-              <p>Website</p>
+        <div v-if="project.links" class="mt-10 flex flex-col items-start">
+          <h1 class="text-2xl font-semibold ">Links</h1>
+            <div class="flex flex-col mt-2 w-full">
+              <div v-if="project.links.github" class="flex flex-row h-fit w-full items-center cursor-pointer hover:bg-fourth rounded-xl p-1 transition-colors duration-200 ease-in-out">
+                <Icon name="mdi:github" size="38" />
+                <NuxtLink :to="project.links.github" target="_blank" class="ml-2">{{project.links.github}}</NuxtLink>
+              </div>
+              <div v-if="project.links.website" class="flex flex-row mt-2 h-fit w-full items-center cursor-pointer hover:bg-fourth rounded-xl p-1 transition-colors duration-200 ease-in-out">
+                <Icon name="mdi:github" size="38" />
+                <NuxtLink :to="project.links.website" target="_blank" class="ml-2">{{project.links.website}}</NuxtLink>
+              </div>
             </div>
           </div>
       </div>

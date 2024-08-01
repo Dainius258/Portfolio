@@ -124,6 +124,10 @@ const projects = ref([
     title: t('projects.jobPortal.title'),
     description: t('projects.jobPortal.description'),
     tags: ["JavaScript", "Vue.js", "Node.js", "MongoDB"],
+    links: {
+      github: "https://github.com/Dainius258/Portfolio",
+      website: "https://github.com/Dainius258/Portfolio"
+    },
     images: [
       { itemImageSrc: "/static/images/jobPortal/jobPortal1.png", thumbnailImageSrc: "/static/images/jobPortal/jobPortal1.png", alt: "Job Portal", title: "Title 1" },
       { itemImageSrc: "/static/images/jobPortal/jobPortal2.png", thumbnailImageSrc: "/static/images/jobPortal/jobPortal2.png", alt: "Job Portal", title: "Title 2"  },
