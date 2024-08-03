@@ -21,7 +21,7 @@
               <img
               :src="image.itemImageSrc"
               :alt="image.alt"
-              class="rounded-md"
+              class="rounded-md max-w-full max-h-[400px] w-auto h-auto object-cover"
             />
             </div>
           </SwiperSlide>
@@ -46,16 +46,16 @@
               <div v-if="project.links.github" >
                 <NuxtLink v-for="link in project.links.github" :key="link" :to="link" target="_blank">
                   <div class="flex flex-row h-fit w-full items-center cursor-pointer hover:bg-fourth p-1 transition-colors duration-200 ease-in-out">
-                  <Icon name="mdi:github mr-2" size="38" />
-                  <p>{{link}}</p>
+                  <Icon name="mdi:github" size="38" />
+                  <p class="ml-2">{{link}}</p>
                   </div>
                 </NuxtLink>
               </div>
               <div v-if="project.links.website">
                 <NuxtLink v-for="link in project.links.website" :key="link" :to="link" target="_blank">
                 <div class="flex flex-row mt-2 h-fit w-full items-center cursor-pointer hover:bg-fourth p-1 transition-colors duration-200 ease-in-out">
-                <Icon name="mdi:link mr-2" size="38" />
-                <p>{{link}}</p>
+                <Icon name="mdi:link" size="38" />
+                <p class="ml-2">{{link}}</p>
                 </div>
                 </NuxtLink>
               </div>

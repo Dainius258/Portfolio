@@ -128,8 +128,8 @@ const projects = ref([
       website: ["https://vb.kvk.lt/permalink/f/4v720s/ELABAPDB201510033"]
     },
     images: [
-      { itemImageSrc: "/static/images/jobPortal/jobPortal1.png", thumbnailImageSrc: "/static/images/jobPortal/jobPortal1.png", alt: "Job Portal", title: "Title 1" },
-      { itemImageSrc: "/static/images/jobPortal/jobPortal2.png", thumbnailImageSrc: "/static/images/jobPortal/jobPortal2.png", alt: "Job Portal", title: "Title 2"  },
+      { itemImageSrc: "/static/images/jobPortal/jobPortal1.png", alt: "Job Portal"},
+      { itemImageSrc: "/static/images/jobPortal/jobPortal2.png", alt: "Job Portal"},
     ]
   },
   {
@@ -140,6 +140,12 @@ const projects = ref([
     links: {
       github: ["https://github.com/Dainius258/ismaniu-namu-sistemos-pasirinkimas"],
     },
+    images: [
+      { itemImageSrc: "/static/images/smartHome/smarthome1.jpg", alt: "Smart Home"},
+      { itemImageSrc: "/static/images/smartHome/smarthome2.jpg", alt: "Smart Home"},
+      { itemImageSrc: "/static/images/smartHome/smarthome3.jpg", alt: "Smart Home"},
+      { itemImageSrc: "/static/images/smartHome/smarthome4.jpg", alt: "Smart Home"},
+    ]
   },
   {
     title: t('projects.recipeApp.title'),
@@ -148,7 +154,17 @@ const projects = ref([
     tags: ["Android Studio", "Kotlin", "Node.js", "Express.js", "PostgreSQL", "JWT", "Figma"],
     links: {
       github: ["https://github.com/Dainius258/recipe-app", "https://github.com/Dainius258/recipe-app-api"],
-    }
+    },
+    images: [
+      { itemImageSrc: "/static/images/recipeApp/recipeapp1.png", alt: "Recipe App"},
+      { itemImageSrc: "/static/images/recipeApp/recipeapp2.png", alt: "Recipe App"},
+      { itemImageSrc: "/static/images/recipeApp/recipeapp3.png", alt: "Recipe App"},
+      { itemImageSrc: "/static/images/recipeApp/recipeapp4.png", alt: "Recipe App"},
+      { itemImageSrc: "/static/images/recipeApp/recipeapp5.png", alt: "Recipe App"},
+      { itemImageSrc: "/static/images/recipeApp/recipeapp6.png", alt: "Recipe App"},
+      { itemImageSrc: "/static/images/recipeApp/recipeapp7.png", alt: "Recipe App"},
+      { itemImageSrc: "/static/images/recipeApp/recipeapp8.png", alt: "Recipe App"},
+    ]
   },
   {
     title: t('projects.scrolle.title'),
@@ -158,6 +174,12 @@ const projects = ref([
     links: {
       github: ["https://github.com/RemiPR/Scrolle-Erasmus-Internship"],
     },
+      images: [
+    { itemImageSrc: "/static/images/scrolle/scrolle1.png", alt: "Scrolle"},
+    { itemImageSrc: "/static/images/scrolle/scrolle2.png", alt: "Scrolle"},
+    { itemImageSrc: "/static/images/scrolle/scrolle3.png", alt: "Scrolle"},
+    { itemImageSrc: "/static/images/scrolle/scrolle4.png", alt: "Scrolle"},
+  ]
   },
 ])
 

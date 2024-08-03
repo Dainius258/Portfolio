@@ -43,7 +43,7 @@
         "scrolle": {
             "title": "Learning Management System „Scrolle“",
             "description": "LMS – Learning Management System developed from scratch by three students for an internship project abroad. I was responsible for the back-end, building and designing micro-services to provide a scalable project. Sometimes I assisted in the front-end.",
-            "detailedDescription": "The idea was similar to Moodle but instead we put heavy focus on user experience to create an easy to use, fast and safe LMS. It was a huge challenge for my colleagues and me but we delivered a minimal prototype in three months and we learned a lot. Back-end utilizes Docker to containerize the services and Traefik for easier routing. Authentication was built securely with access and refresh JWT’s. Micro-services were deployed on Google Cloud Run."
+            "detailedDescription": "The idea was similar to Moodle but instead we put heavy focus on user experience to create an easy to use, fast and safe LMS. It was a huge challenge for my colleagues and me but we delivered a minimal prototype in three months and we learned a lot. Back-end utilizes Docker to containerize the services and Traefik for easier routing. Authentication was built securely with access and refresh JWT’s, guest users that can attend free courses can also login with facebook or google. Micro-services were deployed on Google Cloud Run."
         }
     },
     "experience": {

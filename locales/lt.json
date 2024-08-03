@@ -43,7 +43,7 @@
         "scrolle": {
             "title": "Mokymosi sistema „Scrolle“",
             "description": "LMS – mokymosi valdymo sistema, sukurta nuo nulio trijų studentų praktikai užsienyje. Buvau atsakingas už back-end dalį, kūriau ir projektavau mikroservisus, kad užtikrinčiau jog projektas būtų lengvai plečiamas ateityje. Kartais padėdavau su front-end kūrimu.",
-            "detailedDescription": "Idėja buvo panaši į Moodle, tačiau mes daug dėmesio kad sukurtume intuityvią, lengvai naudojamą, greitą ir saugią LMS. Tai buvo didelis iššūkis man ir mano kolegoms, tačiau per tris mėnesius pristatėme minimalų prototipą ir daug išmokome. Back-end dalis naudoja Docker, kad sukonfiguruoti mikroservisus į konteinerius, ir Traefik, kad būtų lengviau valdyti maršrutizavimą. Autentikacija buvo saugiai sukurta naudojant „access“ ir „refresh“ JWT. Mikroservisai buvo diegiami Google Cloud Run platformoje."
+            "detailedDescription": "Idėja buvo panaši į Moodle, tačiau mes daug dėmesio kad sukurtume intuityvią, lengvai naudojamą, greitą ir saugią LMS. Tai buvo didelis iššūkis man ir mano kolegoms, tačiau per tris mėnesius pristatėme minimalų prototipą ir daug išmokome. Back-end dalis naudoja Docker, kad sukonfiguruoti mikroservisus į konteinerius, ir Traefik, kad būtų lengviau valdyti maršrutizavimą. Autentikacija buvo saugiai sukurta naudojant „access“ ir „refresh“ JWT, taip pat vartotojai kurie nori laikyti nemokamus kursus gali prisijungti su facebook arba google paskyromis. Mikroservisai buvo diegiami Google Cloud Run platformoje."
         }
     },
     "experience": {
