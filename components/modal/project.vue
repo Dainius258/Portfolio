@@ -30,12 +30,12 @@
         <!-- Description -->
         <div class="mt-10 text-left">
           <h1 class="text-2xl font-semibold">{{$t("projectModal.header.description")}}</h1>
-          <p>{{ project.description }}</p>
+          <p>{{ project.description }} {{project.detailedDescription ? project.detailedDescription : ''}}</p>
         </div>
         <!-- Tags -->
         <div class="mt-10 flex flex-col items-start text-start">
           <h1 class="text-2xl font-semibold ">{{$t("projectModal.header.technologies")}}</h1>
-          <div class="flex flex-row">
+          <div class="flex flex-row flex-wrap">
             <ItemTag v-for="(tag, index) in project.tags" :key="index" :name="tag" class="mt-4 mr-2"/>
           </div>
         </div>
@@ -43,13 +43,17 @@
         <div v-if="project.links" class="mt-10 flex flex-col items-start">
           <h1 class="text-2xl font-semibold ">{{$t("projectModal.header.links")}}</h1>
             <div class="flex flex-col mt-2 w-full">
-              <div v-if="project.links.github" class="flex flex-row h-fit w-full items-center cursor-pointer hover:bg-fourth rounded-xl p-1 transition-colors duration-200 ease-in-out">
+              <div v-if="project.links.github" >
+                <div v-for="link in project.links.github" :key="link" class="flex flex-row h-fit w-full items-center cursor-pointer hover:bg-fourth rounded-xl p-1 transition-colors duration-200 ease-in-out">
                 <Icon name="mdi:github" size="38" />
-                <NuxtLink :to="project.links.github" target="_blank" class="ml-2">{{project.links.github}}</NuxtLink>
+                <NuxtLink :to="link" target="_blank" class="ml-2">{{link}}</NuxtLink>
               </div>
-              <div v-if="project.links.website" class="flex flex-row mt-2 h-fit w-full items-center cursor-pointer hover:bg-fourth rounded-xl p-1 transition-colors duration-200 ease-in-out">
-                <Icon name="mdi:github" size="38" />
-                <NuxtLink :to="project.links.website" target="_blank" class="ml-2">{{project.links.website}}</NuxtLink>
+              </div>
+              <div v-if="project.links.website">
+                <div v-for="link in project.links.website" :key="link" class="flex flex-row mt-2 h-fit w-full items-center cursor-pointer hover:bg-fourth rounded-xl p-1 transition-colors duration-200 ease-in-out">
+                <Icon name="mdi:link" size="38" />
+                <NuxtLink :to="link" target="_blank" class="ml-2">{{link}}</NuxtLink>
+                </div>
               </div>
             </div>
           </div>

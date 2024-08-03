@@ -8,8 +8,8 @@
     <h1 class="font-semibold text-3xl">{{ title }}</h1>
     <h2 class="text-sm" v-if="subtitle">{{ subtitle }}</h2>
     <p class="mt-1">{{ description }}</p>
-    <div class="flex flex-row mt-2" v-if="tags">
-      <ItemTag class="mr-3 text-sm" v-for="tag in tags" :key="tag" :name="tag" />
+    <div class="flex flex-row flex-wrap mt-2" v-if="tags">
+      <ItemTag class="mr-3 mt-2 text-sm" v-for="tag in tags" :key="tag" :name="tag" />
     </div>
   </div>
 </template>

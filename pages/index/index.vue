@@ -123,10 +123,9 @@ const projects = ref([
   {
     title: t('projects.jobPortal.title'),
     description: t('projects.jobPortal.description'),
-    tags: ["JavaScript", "Vue.js", "Node.js", "MongoDB"],
+    tags: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Passport.js"],
     links: {
-      github: "https://github.com/Dainius258/Portfolio",
-      website: "https://github.com/Dainius258/Portfolio"
+      website: ["https://vb.kvk.lt/permalink/f/4v720s/ELABAPDB201510033"]
     },
     images: [
       { itemImageSrc: "/static/images/jobPortal/jobPortal1.png", thumbnailImageSrc: "/static/images/jobPortal/jobPortal1.png", alt: "Job Portal", title: "Title 1" },
@@ -136,14 +135,29 @@ const projects = ref([
   {
     title: t('projects.smartHome.title'),
     description: t('projects.smartHome.description'),
+    detailedDescription: t('projects.smartHome.detailedDescription'),
+    tags: ["Android Studio", "Kotlin", "Trello", "Confluence", "Figma"],
+    links: {
+      github: ["https://github.com/Dainius258/ismaniu-namu-sistemos-pasirinkimas"],
+    },
   },
   {
     title: t('projects.recipeApp.title'),
     description: t('projects.recipeApp.description'),
+    detailedDescription: t('projects.recipeApp.detailedDescription'),
+    tags: ["Android Studio", "Kotlin", "Node.js", "Express.js", "PostgreSQL", "JWT", "Figma"],
+    links: {
+      github: ["https://github.com/Dainius258/recipe-app", "https://github.com/Dainius258/recipe-app-api"],
+    }
   },
   {
     title: t('projects.scrolle.title'),
     description: t('projects.scrolle.description'),
+    detailedDescription: t('projects.scrolle.detailedDescription'),
+    tags: ["Nuxt", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT", "Docker", "Traefik", "Figma", "Trello", "Google Cloud Run"],
+    links: {
+      github: ["https://github.com/RemiPR/Scrolle-Erasmus-Internship"],
+    },
   },
 ])
 

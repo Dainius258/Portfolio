@@ -16,7 +16,7 @@
         "title": "About me",
         "description": {
             "first": "I am a passionate full-stack developer who is looking to hone his skills and develop intuitive, beautiful and most importantly secure applications. Currently I am studying in my third year at Klaipėdos valstybinė kolegija / Higher education institution.",
-            "second": "I learned a lot during study years by doing multiple projects. I did not hold back to take on completely new things by myself or with my colleagues and I developed projects using Node.js, Express.js, Android Studio, Docker and so on.",
+            "second": "I learned a lot during study years by doing multiple projects. I did not hold back to take on completely new things by myself or with my colleagues and I developed projects using Node.js, Express.js, Nuxt 3, Android Studio, Docker and so on.",
             "third": "Developed in an agile environment and I know basics of it and so the importance of communication, teamwork and taking the initiative to succesfully deliver a result.",
             "fourth": "In my leisure time I enjoy playing video games, fishing, watching videos on youtube and sometimes learning new things such as video editing, Blender, Unreal Engine or modding games in general." 
         }
@@ -28,19 +28,22 @@
         "title": "Projects",
         "jobPortal": {
             "title": "Job Listings Portal",
-            "description": "A job portal where you can find a job or post a job. You can also apply for a job and see your applications. The project was developed using Node.js, Express.js, MongoDB, EJS, Bootstrap, Docker and Docker Compose."
+            "description": "A job portal where you can find or post a job. Developed along with two other colleagues, we explored the MERN stack. I mainly worked on back-end side of it building authentication and other features with Passport.js. Scientific paper about this project was presented at KVK technology conference."
         },
         "smartHome": {
             "title": "Smart Home System Solutions App",
-            "description": "A job portal where you can find a job or post a job. You can also apply for a job and see your applications. The project was developed using Node.js, Express.js, MongoDB, EJS, Bootstrap, Docker and Docker Compose."
+            "description": "A mobile Android application that helps you to decide which smart home system is suitable for the client. Developed along with three other students. I was responsible for being a Scrum master and doing front-end in an agile work environment.",
+            "detailedDescription": "App guides user through a series of questions and based on the answers it suggests a smart home system that would be suitable for the client. It also provides information about the systems and links to the official website of the systems providers."
         },
         "recipeApp": {
             "title": "Recipe App",
-            "description": "A job portal where you can find a job or post a job. You can also apply for a job and see your applications. The project was developed using Node.js, Express.js, MongoDB, EJS, Bootstrap, Docker and Docker Compose."
+            "description": "I wanted to dive deeper into mobile app development and so the result was an Android application for finding and sharing recipes. Developed solo as a project for coursework. Users can view, search, filter, rate recipes and share their own.",
+            "detailedDescription": "Only registered users can rate and share recipes, JWT is used for authentication. The app also has a feature to add recipes to favorites and view them later."
         },
         "scrolle": {
             "title": "Learning Management System „Scrolle“",
-            "description": "A job portal where you can find a job or post a job. You can also apply for a job and see your applications. The project was developed using Node.js, Express.js, MongoDB, EJS, Bootstrap, Docker and Docker Compose."
+            "description": "LMS – Learning Management System developed from scratch by three students for an internship project abroad. I was responsible for the back-end, building and designing micro-services to provide a scalable project. Sometimes I assisted in the front-end.",
+            "detailedDescription": "The idea was similar to Moodle but instead we put heavy focus on user experience to create an easy to use, fast and safe LMS. It was a huge challenge for my colleagues and me but we delivered a minimal prototype in three months and we learned a lot. Back-end utilizes Docker to containerize the services and Traefik for easier routing. Authentication was built securely with access and refresh JWT’s. Micro-services were deployed on Google Cloud Run."
         }
     },
     "experience": {
