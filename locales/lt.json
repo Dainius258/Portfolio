@@ -1,5 +1,4 @@
 {
-    "test": "Tai yra testas",
     "nav": {
         "lithuanian": "Lietuvių",
         "english": "Anglų",
@@ -58,5 +57,23 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
             "date": "Gegužė - Liepa 2024"
         }
+    },
+    "contactForm": {
+        "title": "Susisiekite",
+        "subtitle": {
+            "first": "Susisiekite tiesiogiai per elektroninį paštą",
+            "second": "arba užpildykite formą"
+        },
+        "email": "Elektroninis paštas",
+        "message": "Žinutė",
+        "send": "Siųsti"
+    },
+    "projectModal": {
+        "header": {
+            "description": "Aprašymas",
+            "technologies": "Naudojamos technologijos",
+            "links": "Nuorodos"
+        },
+        "close": "Uždaryti"
     }
 }

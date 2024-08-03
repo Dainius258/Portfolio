@@ -5,7 +5,7 @@
         <!-- Header -->
         <div class="flex flex-row justify-between">
           <h1 class=" text-3xl font-semibold">{{ project.title }}</h1>
-          <button @click="$emit('closeModal')" class="bg-tertiary px-4 py-1 text-white rounded-2xl text-2xl transition-colors duration-300 hover:bg-fourth">Close</button>
+          <button @click="$emit('closeModal')" class="bg-tertiary px-4 py-1 text-white rounded-2xl text-2xl transition-colors duration-300 hover:bg-fourth">{{$t("projectModal.close")}}</button>
         </div>
         <!-- Images -->
         <div v-if="project.images" class="mt-10">
@@ -29,16 +29,19 @@
         </div>
         <!-- Description -->
         <div class="mt-10 text-left">
-          <h1 class="text-2xl font-semibold">Description</h1>
+          <h1 class="text-2xl font-semibold">{{$t("projectModal.header.description")}}</h1>
           <p>{{ project.description }}</p>
         </div>
         <!-- Tags -->
-        <div class="flex flex-row">
-          <ItemTag v-for="(tag, index) in project.tags" :key="index" :name="tag" class="mt-4 mr-2"/>
+        <div class="mt-10 flex flex-col items-start text-start">
+          <h1 class="text-2xl font-semibold ">{{$t("projectModal.header.technologies")}}</h1>
+          <div class="flex flex-row">
+            <ItemTag v-for="(tag, index) in project.tags" :key="index" :name="tag" class="mt-4 mr-2"/>
+          </div>
         </div>
         <!-- Links -->
         <div v-if="project.links" class="mt-10 flex flex-col items-start">
-          <h1 class="text-2xl font-semibold ">Links</h1>
+          <h1 class="text-2xl font-semibold ">{{$t("projectModal.header.links")}}</h1>
             <div class="flex flex-col mt-2 w-full">
               <div v-if="project.links.github" class="flex flex-row h-fit w-full items-center cursor-pointer hover:bg-fourth rounded-xl p-1 transition-colors duration-200 ease-in-out">
                 <Icon name="mdi:github" size="38" />
@@ -62,6 +65,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+const { locale } = useI18n()
 const modules = [Navigation, Pagination];
 
 const props = defineProps({

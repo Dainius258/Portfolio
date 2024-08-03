@@ -1,5 +1,4 @@
 {
-    "test": "This is a test",
     "nav": {
         "lithuanian": "Lithuanian",
         "english": "English",
@@ -58,5 +57,23 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
             "date": "May - July 2024"
         }
+    },
+    "contactForm": {
+        "title": "Contact me",
+        "subtitle": {
+            "first": "Please contact me directly at",
+            "second": "or through this form"
+        },
+        "email": "Email",
+        "message": "Message",
+        "send": "Send"
+    },
+    "projectModal": {
+        "header": {
+            "description": "Description",
+            "technologies": "Technologies",
+            "links": "Links"
+        },
+        "close": "Close"
     }
 }
