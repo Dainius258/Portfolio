@@ -44,16 +44,20 @@
           <h1 class="text-2xl font-semibold ">{{$t("projectModal.header.links")}}</h1>
             <div class="flex flex-col mt-2 w-full">
               <div v-if="project.links.github" >
-                <div v-for="link in project.links.github" :key="link" class="flex flex-row h-fit w-full items-center cursor-pointer hover:bg-fourth rounded-xl p-1 transition-colors duration-200 ease-in-out">
-                <Icon name="mdi:github" size="38" />
-                <NuxtLink :to="link" target="_blank" class="ml-2">{{link}}</NuxtLink>
-              </div>
+                <NuxtLink v-for="link in project.links.github" :key="link" :to="link" target="_blank">
+                  <div class="flex flex-row h-fit w-full items-center cursor-pointer hover:bg-fourth p-1 transition-colors duration-200 ease-in-out">
+                  <Icon name="mdi:github mr-2" size="38" />
+                  <p>{{link}}</p>
+                  </div>
+                </NuxtLink>
               </div>
               <div v-if="project.links.website">
-                <div v-for="link in project.links.website" :key="link" class="flex flex-row mt-2 h-fit w-full items-center cursor-pointer hover:bg-fourth rounded-xl p-1 transition-colors duration-200 ease-in-out">
-                <Icon name="mdi:link" size="38" />
-                <NuxtLink :to="link" target="_blank" class="ml-2">{{link}}</NuxtLink>
+                <NuxtLink v-for="link in project.links.website" :key="link" :to="link" target="_blank">
+                <div class="flex flex-row mt-2 h-fit w-full items-center cursor-pointer hover:bg-fourth p-1 transition-colors duration-200 ease-in-out">
+                <Icon name="mdi:link mr-2" size="38" />
+                <p>{{link}}</p>
                 </div>
+                </NuxtLink>
               </div>
             </div>
           </div>
