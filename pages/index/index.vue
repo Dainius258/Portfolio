@@ -4,7 +4,7 @@
         <header class="sticky top-0 z-10 slide-in-top">
           <Nav class="mt-12" @scroll="scrollToSection"></Nav>
         </header>
-        <main class="w-6/12 flex flex-col items-center">
+        <main class="lg:w-8/12 w-10/12 flex flex-col items-center">
         <ModalProject :project="selectedProject" @close-modal="showProjectModal=false" v-show="showProjectModal"/>
         <TitleDescription class="mt-16 appear"></TitleDescription>
         <!-- About -->
@@ -20,7 +20,7 @@
         </div>
         <!-- Skills -->
         <h1 class="mt-16 text-4xl font-semibold" >{{$t('skills.title')}}</h1>
-        <MarqueeSkills :skillsArray="skills" class="mt-10"/>
+        <Skills :isMarquee="true" :skillsArray="skills" class="mt-10"/>
         <!-- Projects -->
         <div ref="projectsSection" id="projects" class="flex flex-col items-center">
           <h1 class="mt-16 text-4xl font-semibold" >{{$t('projects.title')}}</h1>
@@ -52,7 +52,6 @@
 </template>
 
 <script setup>
-
 const { locale, getLocaleCookie, t } = useI18n()
 const greeting = ref("");
 
@@ -188,18 +187,20 @@ const projects = ref([
 const selectedProject = ref(projects.value[0]);
 
 const skills = ref([
-    "JavaScript",
     "Java",
     "Kotlin",
     "Android Studio",
     "Vue.js",
+    "Nuxt.js",
+    "React",
     "Node.js",
     "Express.js",
     "MongoDB",
     "PostgreSQL",
     "Git",
     "Docker",
-    "Blender",
+    "Figma",
+    "Tailwind CSS",
 ])
 
 </script>
