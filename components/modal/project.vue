@@ -11,10 +11,11 @@
         <div v-if="project.images" class="mt-10">
           <Swiper
            :modules="modules"
-           navigation
+           :navigation="{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }"
            :pagination="{ clickable: true }"
            :slides-per-view="1"
            :space-between="20"
+           @swiper="setMainSwiper"
           >
           <SwiperSlide v-for="(image, index) in project.images" :key="index">
             <div class="flex justify-center">
@@ -22,10 +23,13 @@
               :src="image.itemImageSrc"
               :alt="image.alt"
               class="rounded-md max-w-full max-h-[400px] w-auto h-auto object-cover"
-            />
+              />
             </div>
           </SwiperSlide>
+                      <div class="swiper-button-prev" @click.stop></div>
+                      <div class="swiper-button-next" @click.stop></div>
         </Swiper>
+
         </div>
         <!-- Description -->
         <div class="mt-10 text-left">
@@ -75,6 +79,7 @@ import 'swiper/css/pagination';
 
 const { locale } = useI18n()
 const modules = [Navigation, Pagination];
+const mainSwiperInstance = ref(null);
 
 const props = defineProps({
   project: {
@@ -83,11 +88,15 @@ const props = defineProps({
   }
 })
 
+const setMainSwiper = (swiper) => {
+  mainSwiperInstance.value = swiper;
+};
+
 const visible = ref(false);
 
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 
 .modal-overlay {
   position: fixed;
@@ -125,6 +134,29 @@ const visible = ref(false);
 
 .modal::-webkit-scrollbar-thumb:hover {
   background: #1893ac;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-white bg-tertiary bg-opacity-50 w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-300 ease-in-out z-10;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  @apply bg-opacity-75;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  @apply text-xl;
+}
+
+.swiper-button-prev {
+  @apply left-5;
+}
+
+.swiper-button-next {
+  @apply right-5;
 }
 
 </style>

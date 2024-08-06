@@ -51,13 +51,13 @@
         "college": {
             "title": "Informatics Student",
             "location": "Klaipėdos valstybinė kolegija / Higher Education Institution. Klaipėda, Lithuania",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
+            "description": "During my studies, I experienced development of various projects like websites, mobile applications, games and augmented reality stuff using technologies such as Nuxt, Android Studio, Unreal Engine 5, Godot Engine and so on. As well as useful theory about object-oriented programming, design patterns and agile environment.",
             "date": "2022 - Present"
         },
         "turiba": {
             "title": "3 Month Internship Abroad",
             "location": "Turiba University. Riga, Latvia",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
+            "description": "In this internship I went together with two other KVK students. We were tasked with designing and creating an LMS – Learning Management System prototype from scratch. I was responsible alone for the back-end, designing and creating micro-services. Sometimes I was assisting in the front-end.",
             "date": "May - July 2024"
         }
     },

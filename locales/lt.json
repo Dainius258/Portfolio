@@ -51,13 +51,13 @@
         "college": {
             "title": "Informatikos studentas",
             "location": "Klaipėdos valstybinė kolegija",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
+            "description": "Studijų metu dirbau su įvairiais projektais, tokiais kaip svetainės, mobiliosios aplikacijos, žaidimai ir papildytos realybės projektai, naudodamas technologijas kaip Nuxt, Android Studio, Unreal Engine 5, Godot Engine ir kt. Taip pat įgijau naudingų teorinių žinių apie objektinį programavimą, dizaino šablonus ir Agile darbo aplinką.",
             "date": "2022 - Dabar"
         },
         "turiba": {
             "title": "3 mėnesių praktika užsienyje",
             "location": "Turiba Universitetas. Ryga, Latvija",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id tincidunt tincidunt, nunc nunc lacinia lorem, nec lacinia nunc mi in velit. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc. Nulla facilisi. Sed id nunc auctor, lacinia nunc nec, lacinia nunc.",
+            "description": "Į šia praktika vykau kartu su dviem KVK studentais. Mus paskyrė sukurti LMS – mokymosi valdymo sistemos prototipą nuo nulio. Aš buvau vienintelis atsakingas už back-end dalį, mikroservisų projektavimą ir kūrimą. Kartais padėdavau front-end kūrime.",
             "date": "Gegužė - Liepa 2024"
         }
     },
