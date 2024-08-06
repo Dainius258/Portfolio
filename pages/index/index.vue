@@ -1,14 +1,14 @@
 <template>
-  <div class="bg-primary size-full flex flex-col text-white">
+<div class="bg-primary size-full flex flex-col text-white">
     <div class="flex flex-col items-center">
-        <header class="sticky top-0 z-10">
+        <header class="sticky top-0 z-10 slide-in-top">
           <Nav class="mt-12" @scroll="scrollToSection"></Nav>
         </header>
         <main class="w-6/12 flex flex-col items-center">
         <ModalProject :project="selectedProject" @close-modal="showProjectModal=false" v-show="showProjectModal"/>
-        <TitleDescription class="mt-16"></TitleDescription>
+        <TitleDescription class="mt-16 appear"></TitleDescription>
         <!-- About -->
-        <div ref="aboutSection" id="about" class="flex flex-col items-center">
+        <div ref="aboutSection" id="about" class="flex flex-col items-center appear" :class="{'text-transparent': greeting === ''}">
           <h1 class="mt-16 text-4xl font-semibold" >{{ $t('about.title') }}</h1>
           <p class="mt-10 text-xl">
             {{greeting}},
@@ -48,10 +48,11 @@
         </div>
         </main>
     </div>
-  </div>
+</div>
 </template>
 
 <script setup>
+
 const { locale, getLocaleCookie, t } = useI18n()
 const greeting = ref("");
 
@@ -59,6 +60,7 @@ const aboutSection = ref(null);
 const experienceSection = ref(null);
 const projectsSection = ref(null);
 const contactSection = ref(null);
+const initialLoad = ref(true);
 
 const showProjectModal = ref(false);
 
@@ -230,5 +232,33 @@ const skills = ref([
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.appear {
+  animation: appear 1s ease-out forwards;
+}
+.slide-in-top {
+  animation: slide-in-top 0.5s ease-out forwards;
+}
+
 </style>
 
