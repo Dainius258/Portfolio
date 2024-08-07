@@ -1,11 +1,11 @@
 <template>
   <div @click="$emit('closeModal')" class="modal-overlay z-10">
-    <div class="modal h-5/6 w-6/12 p-6 bg-secondary text-white flex flex-col" @click.stop>
+    <div class="modal lg:h-5/6 lg:w-6/12 p-6 bg-secondary text-white flex flex-col" @click.stop>
       <div v-if="project">
         <!-- Header -->
         <div class="flex flex-row justify-between">
           <h1 class=" text-3xl font-semibold">{{ project.title }}</h1>
-          <button @click="$emit('closeModal')" class="bg-tertiary px-4 py-1 text-white rounded-2xl text-2xl transition-colors duration-300 hover:bg-fourth">{{$t("projectModal.close")}}</button>
+          <button @click="$emit('closeModal')" class="bg-tertiary h-fit w-fit px-4 py-1 text-white rounded-2xl text-2xl transition-colors duration-300 hover:bg-fourth">{{$t("projectModal.close")}}</button>
         </div>
         <!-- Images -->
         <div v-if="project.images" class="mt-10">
@@ -51,7 +51,7 @@
                 <NuxtLink v-for="link in project.links.github" :key="link" :to="link" target="_blank">
                   <div class="flex flex-row h-fit w-full items-center cursor-pointer hover:bg-fourth p-1 transition-colors duration-200 ease-in-out">
                   <Icon name="mdi:github" size="38" />
-                  <p class="ml-2">{{link}}</p>
+                  <p class="ml-2 text-left overflow-hidden">{{link}}</p>
                   </div>
                 </NuxtLink>
               </div>
@@ -59,7 +59,7 @@
                 <NuxtLink v-for="link in project.links.website" :key="link" :to="link" target="_blank">
                 <div class="flex flex-row mt-2 h-fit w-full items-center cursor-pointer hover:bg-fourth p-1 transition-colors duration-200 ease-in-out">
                 <Icon name="mdi:link" size="38" />
-                <p class="ml-2">{{link}}</p>
+                <p class="ml-2 text-left overflow-hidden">{{link}}</p>
                 </div>
                 </NuxtLink>
               </div>

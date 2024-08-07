@@ -1,7 +1,7 @@
 <template>
     <div v-outside="closeDropdown" class="relative w-fit font-sans">
     <button 
-    @click="open = !open" 
+    @click="toggleDropwdown" 
     class="flex justify-between rounded-full w-fit p-1 bg-primary transition-colors duration-200 ease-in-out hover:bg-fourth hover:text-cyan-300 text-lg text-white mx-2 my-2 px-2"
     :class="{' bg-cyan-500 text-cyan-300': open}"
     >
@@ -43,6 +43,10 @@ const selectLanguage = (language, icon) => {
       setLocale('lt-LT');
       break
   }
+}
+
+const toggleDropwdown = () => {
+  open.value = !open.value
 }
 
 const openDropdown = () => {

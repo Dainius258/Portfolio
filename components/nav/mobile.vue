@@ -12,12 +12,12 @@
                     <Icon name="mdi:github" class="transition-colors duration-200 ease-in-out mx-2 mt-2 bg-white  hover:bg-cyan-300" size="38" />
                 </button>
                 </NuxtLink>
-             <NavButton 
+            </div>
+            <NavButton 
                 class="bg-primary"
                 @click="emitScrollEvent('contact')" 
                 :text="$t('nav.contact')"
             />
-            </div>
             <NavLangSwitcher/>
         </div>
     </div>
@@ -32,7 +32,6 @@ const { currentSection } = useScrollSpy()
 
 const emitScrollEvent = (section) => {
     emit('scroll', section)
-    currentSection.value = section
 }
 
 const { locale } = useI18n()

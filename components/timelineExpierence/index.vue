@@ -1,29 +1,30 @@
 <template>
     <div class="container mx-auto">
     <div class="relative">
-      <div class="absolute h-full w-0.5 bg-fourth left-1/2 transform -translate-x-1/2"></div>
+      <div v-if="!smallerThanMd" class="absolute h-full w-0.5 bg-fourth left-1/2 transform -translate-x-1/2"></div>
       <div class="h-16"></div>
       <div class="space-y-8">
-        <div v-for="(item, index) in experience" :key="index" class="flex items-start relative">
+        <div v-for="(item, index) in experience" :key="index" class="flex items-start">
          <div 
          v-element-visibility="state => onCardVisibility(state, index)" 
-         class="w-1/2" 
+         class="md:w-1/2 w-full" 
          :class="{ 
-          'order-1 mr-20  text-right slide-in-right': index % 2 === 0 && cardVisible[index], 
-          'order-2 ml-20 slide-in-left': index % 2 !== 0 && cardVisible[index],
+          'order-1 mr-4 md:mr-20 text-right slide-in-right': index % 2 === 0 && cardVisible[index], 
+          'order-2 ml-4 md:ml-20 slide-in-left': index % 2 !== 0 && cardVisible[index],
           'opacity-0 translate-x-100': !cardVisible[index],
           }">
             <ItemCard :title="item.title" :subtitle="item.location" :description="item.description"/>
           </div>
           <!-- Checkpoint -->
           <div 
+          v-if="!smallerThanMd"
           class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-white flex items-center justify-center"
           >
             <NuxtImg class=" size-full p-3" :src="item.img" />
           </div>
           <!-- Date -->
           <div 
-          class="w-1/2 mt-5" 
+          class="md:w-1/2 w-fit text-sm md:text-base mt-" 
           :class="{ 
             'order-2 appear': index % 2 === 0 && cardVisible[index],  
             'order-1 text-right appear': index % 2 !== 0 && cardVisible[index],
@@ -40,6 +41,10 @@
 
 <script setup>
 import { vElementVisibility } from '@vueuse/components'
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const smallerThanMd = breakpoints.smaller('md')
 
 const cardVisible = ref([])
 function onCardVisibility(state, index) {
