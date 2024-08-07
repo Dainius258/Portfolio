@@ -10,7 +10,7 @@
     </button>
     <!-- Dropdown -->
     <transition name="fade">
-      <div v-if="open" class="absolute z-10 ml-2 mt-4 w-44 rounded-md shadow-lg border-2 border-primary bg-sky-800 ">
+      <div v-if="open" class="absolute -translate-x-24 z-10 md:-translate-x-0 mt-4 w-44 rounded-md shadow-lg border-2 border-primary bg-sky-800 ">
         <div class="py-1">
           <button @click="selectLanguage('English', 'flag:gb-4x3')" class= "block w-full text-left px-4 py-2 text-sm text-white hover:bg-fourth ">
             {{ $t('nav.english') }} <Icon name="flag:gb-4x3" />

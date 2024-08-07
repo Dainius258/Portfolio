@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-sky-800 size-fit flex flex-row rounded-full justify-between p-1 border-4 shadow-lg border-primary">
-        <div class="flex flex-row justify-center">
+    <div class="bg-sky-800 w-screen md:size-fit flex flex-row md:rounded-full justify-between p-1 md:border-4 border-b-2 shadow-lg border-primary">
+        <div class="flex flex-row justify-center ml-2">
             <NavButton 
                 @click="emitScrollEvent('about')"  
                 :text="$t('nav.about')"
@@ -23,8 +23,8 @@
             />
         </div>
         <div class="flex flex-row ml-4">
-            <NavLangSwitcher/>
-            <NavColorMode class="mr-2"/>
+            <NavLangSwitcher class="mr-2"/>
+            <!-- <NavColorMode class="mr-2"/> -->
         </div>
     </div>
 </template>

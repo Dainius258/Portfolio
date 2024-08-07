@@ -2,7 +2,8 @@
 <div class="bg-primary size-full flex flex-col text-white">
     <div class="flex flex-col items-center">
         <header class="sticky top-0 z-10 slide-in-top">
-          <Nav class="mt-12" @scroll="scrollToSection"></Nav>
+          <Nav class="hidden sm:flex md:mt-6" @scroll="scrollToSection"></Nav>
+          <NavMobile class="sm:hidden" @scroll="scrollToSection"></NavMobile>
         </header>
         <main class="lg:w-8/12 w-10/12 flex flex-col items-center">
         <ModalProject :project="selectedProject" @close-modal="showProjectModal=false" v-show="showProjectModal"/>
