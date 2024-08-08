@@ -1,6 +1,6 @@
 <template>
   <div @click="$emit('closeModal')" class="modal-overlay z-10">
-    <div class="modal lg:h-5/6 lg:w-6/12 p-6 bg-secondary text-white flex flex-col" @click.stop>
+    <div class="modal lg:h-5/6 lg:w-6/12 p-4 bg-secondary text-white flex flex-col" @click.stop>
       <div v-if="project">
         <!-- Header -->
         <div class="flex flex-row justify-between">
@@ -23,7 +23,7 @@
               :src="image.itemImageSrc"
               :alt="image.alt"
               :key="image.itemImageSrc"
-              class="rounded-md max-w-full max-h-[400px] w-auto h-auto object-cover"
+              class="rounded-md max-w-full max-h-[400px] w-auto h-auto object-cover mb-10"
               />
             </div>
           </SwiperSlide>

@@ -1,9 +1,9 @@
 <template>
     <div v-outside="closeDropdown" class="relative w-fit font-sans">
     <button 
-    @click="toggleDropwdown" 
+    @click="toggleDropdown" 
     class="flex justify-between rounded-full w-fit p-1 bg-primary transition-colors duration-200 ease-in-out hover:bg-fourth hover:text-cyan-300 text-lg text-white mx-2 my-2 px-2"
-    :class="{' bg-cyan-500 text-cyan-300': open}"
+    :class="{' bg-cyan-500 text-cyan-300': open, 'hover:bg-fourth hover:text-cyan-300': !open}"
     >
       <Icon class="mt-1 ml-1" :name="selectedIcon" /> 
       <Icon class="size-7 transition-transform duration-500 ease-in-out" :class="{'rotate-180': open}" name="mdi:chevron-up" />
@@ -45,7 +45,7 @@ const selectLanguage = (language, icon) => {
   }
 }
 
-const toggleDropwdown = () => {
+const toggleDropdown = () => {
   open.value = !open.value
 }
 
