@@ -19,9 +19,10 @@
           >
           <SwiperSlide v-for="(image, index) in project.images" :key="index">
             <div class="flex justify-center">
-              <img
+              <img 
               :src="image.itemImageSrc"
               :alt="image.alt"
+              :key="image.itemImageSrc"
               class="rounded-md max-w-full max-h-[400px] w-auto h-auto object-cover"
               />
             </div>
@@ -80,6 +81,12 @@ import 'swiper/css/pagination';
 const { locale } = useI18n()
 const modules = [Navigation, Pagination];
 const mainSwiperInstance = ref(null);
+
+onMounted(() => {
+  setTimeout(() => {
+    isLoading.value = false
+  }, 500) // 1000ms = 1s
+})
 
 const props = defineProps({
   project: {

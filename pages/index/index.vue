@@ -1,5 +1,5 @@
 <template>
-<div class="bg-primary size-full flex flex-col text-white">
+<div class="bg-primary size-full flex flex-col text-white overflow-x-hidden">
     <div class="flex flex-col items-center">
         <header class="sticky top-0 z-10 slide-in-top">
           <Nav class="hidden sm:flex md:mt-6" @scroll="scrollToSection"></Nav>

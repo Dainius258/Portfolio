@@ -20,7 +20,7 @@
           v-if="!smallerThanMd"
           class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-white flex items-center justify-center"
           >
-            <NuxtImg class=" size-full p-3" :src="item.img" />
+            <NuxtImg class="size-full p-3" :src="item.img" />
           </div>
           <!-- Date -->
           <div 
