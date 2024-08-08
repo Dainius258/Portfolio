@@ -82,12 +82,6 @@ const { locale } = useI18n()
 const modules = [Navigation, Pagination];
 const mainSwiperInstance = ref(null);
 
-onMounted(() => {
-  setTimeout(() => {
-    isLoading.value = false
-  }, 500) // 1000ms = 1s
-})
-
 const props = defineProps({
   project: {
     type: Object,
