@@ -14,6 +14,7 @@
                 </NuxtLink>
             </div>
             <NavButton 
+                v-if="!smallerThanXs"
                 class="bg-primary"
                 @click="emitScrollEvent('contact')" 
                 :text="$t('nav.contact')"
@@ -25,6 +26,12 @@
 
 <script setup>
 import { useScrollSpy } from '~/composables/useScrollSpy';
+import { useBreakpoints } from '@vueuse/core'
+
+const breakpoints = useBreakpoints({
+  xs: 350, // optional
+})
+const smallerThanXs = breakpoints.smaller('xs');
 
 const emit = defineEmits(['scroll'])
 
