@@ -1,10 +1,10 @@
 <template>
-<div class="bg-primary size-full flex flex-col text-white overflow-x-hidden">
-    <div class="flex flex-col items-center">
-        <header class="sticky top-0 z-10 slide-in-top">
+<div class="bg-primary">
+  <header class="sticky top-0 z-10 slide-in-top overflow-x-hidden">
           <Nav class="hidden sm:flex md:mt-6" @scroll="scrollToSection"></Nav>
           <NavMobile class="sm:hidden" @scroll="scrollToSection"></NavMobile>
-        </header>
+  </header>
+    <div class="bg-primary size-full flex flex-col text-white items-center overflow-x-hidden">
         <main class="lg:w-8/12 w-10/12 flex flex-col items-center">
         <ModalProject :project="selectedProject" @close-modal="showProjectModal=false" v-show="showProjectModal"/>
         <TitleDescription class="mt-16 appear"></TitleDescription>
