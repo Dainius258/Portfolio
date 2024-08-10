@@ -110,14 +110,16 @@ const experience = ref([
     location: t('experience.college.location'),
     description: t('experience.college.description'),
     date: t('experience.college.date'),
-    img: "/static/logo/kvk.png"
+    img: "/static/logo/kvk.png",
+    alt: "Klaipėda State College"
  },
   {
     title: t('experience.turiba.title'),
     location: t('experience.turiba.location'),
     description: t('experience.turiba.description'),
     date: t('experience.turiba.date'),
-    img: "/static/logo/tu.png"
+    img: "/static/logo/tu.png",
+    alt: "Klaipėda State College"
   },
 ])
 
