@@ -68,8 +68,18 @@
             "second": "arba užpildykite formą"
         },
         "email": "Elektroninis paštas",
+        "name":"Vardas",
         "message": "Žinutė",
-        "send": "Siųsti"
+        "send": "Siųsti",
+        "success": "Žinutė sėkmingai išsiųsta",
+        "error": "Įvyko klaida, bandykite dar kartą vėliau",
+        "required": {
+            "name": "*Vardas yra privalomas",
+            "email": "*Elektroninis paštas yra privalomas",
+            "emailValid": "*Įveskite teisingą elektroninį paštą",
+            "message": "*Žinutė yra privaloma, bent 10 simbolių ilgio",
+            "messageLength": "*Žinutė turi būti bent 10 simbolių ilgio"
+        }
     },
     "projectModal": {
         "header": {

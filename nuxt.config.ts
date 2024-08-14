@@ -10,8 +10,16 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     "nuxt-marquee",
     "@nuxt/image",
-    "nuxt-swiper"
+    "nuxt-swiper",
+    '@vee-validate/nuxt'
   ],
+  runtimeConfig: {
+    public: {
+      emailJsPublicKey: process.env.EMAILJS_PUBLIC_KEY,
+      emailJsServiceId: process.env.EMAILJS_SERVICE_ID,
+      emailJsContactMeTemplateId: process.env.EMAILJS_CONTACTME_TEMPLATE_ID,
+    },
+  },
   i18n: {
     lazy: true,
     langDir: "locales",
