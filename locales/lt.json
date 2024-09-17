@@ -72,6 +72,7 @@
         "message": "Žinutė",
         "send": "Siųsti",
         "success": "Žinutė sėkmingai išsiųsta",
+        "submitting": "Siunčiama...",
         "error": "Įvyko klaida, bandykite dar kartą vėliau",
         "required": {
             "name": "*Vardas yra privalomas",

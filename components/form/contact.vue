@@ -1,12 +1,17 @@
 <template>
 <div>
     <transition name="fade">
-    <div class="px-2 py-2 flex flex-row items-center" v-if="submitted">
-        <h1 class="text-4xl">{{t('contactForm.success')}}</h1>
-        <Icon name="ic:baseline-check-circle-outline" size="56" class="text-fourth ml-2"/>
+    <div class="px-2 py-2 flex flex-row items-center" v-if="submitting">
+        <div class="flex flex-row" v-if="!submitted">
+          <h1 class="text-4xl">{{t('contactForm.submitting')}}</h1>
+        </div>
+        <div class="flex flex-row" v-if="submitted">
+          <h1 class="text-4xl">{{t('contactForm.success')}}</h1>
+          <Icon name="ic:baseline-check-circle-outline" size="56" class="text-fourth ml-2"/>
+        </div>
     </div>
     </transition>
-    <div v-if="!submitted" class="flex flex-col items-center p-2 w-fit rounded-3xl bg-secondary">
+    <div v-if="!submitting" class="flex flex-col items-center p-2 w-fit rounded-3xl bg-secondary">
           <div class="flex flex-col items-center">
             <h1 class="text-4xl font-semibold">{{t('contactForm.title')}}</h1>
             <form class="p-2 flex flex-col items-center w-full h-fit">
@@ -53,6 +58,7 @@ import { useForm } from 'vee-validate';
 import * as yup from 'yup';
 
 const submitted = ref(false);
+const submitting = ref(false);
 const { t } = useI18n()
 const config = useRuntimeConfig();
 
@@ -85,6 +91,7 @@ const [message, messageAttrs] = defineField('message', {
 
 const onSubmit = handleSubmit(async () => {
   try {
+    submitting.value = true;
     const serviceId = config.public.emailJsServiceId;
     const contactMeTemplateId = config.public.emailJsContactMeTemplateId;
     const templateParams = {
