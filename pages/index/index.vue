@@ -112,12 +112,28 @@ const experience = ref([
     date: t('experience.college.date'),
     img: "/static/logo/kvk.png",
     alt: "Klaipėda State College"
- },
+  },
   {
     title: t('experience.turiba.title'),
     location: t('experience.turiba.location'),
     description: t('experience.turiba.description'),
     date: t('experience.turiba.date'),
+    img: "/static/logo/tu.png",
+    alt: "Klaipėda State College"
+  },
+  { 
+  title: t('experience.bipfulda.title'),
+  location: t('experience.bipfulda.location'),
+  description: t('experience.bipfulda.description'),
+  date: t('experience.bipfulda.date'),
+  img: "/static/logo/fulda.png",
+  alt: "Klaipėda State College"
+  },
+  {
+    title: t('experience.bipturiba.title'),
+    location: t('experience.bipturiba.location'),
+    description: t('experience.bipturiba.description'),
+    date: t('experience.bipturiba.date'),
     img: "/static/logo/tu.png",
     alt: "Klaipėda State College"
   },
@@ -195,7 +211,6 @@ const skills = ref([
     "Android Studio",
     "Vue.js",
     "Nuxt.js",
-    "React",
     "Node.js",
     "Express.js",
     "MongoDB",

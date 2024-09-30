@@ -18,7 +18,7 @@
             "first": "I am a passionate full-stack developer who is looking to hone his skills and develop intuitive, beautiful and most importantly secure applications. Currently I am studying in my third year at Klaipėdos valstybinė kolegija / Higher education institution.",
             "second": "I learned a lot during study years by doing multiple projects. I did not hold back to take on completely new things by myself or with my colleagues and I developed projects using Node.js, Express.js, Nuxt 3, Android Studio, Docker and so on.",
             "third": "Developed in an agile environment and I know basics of it and so the importance of communication, teamwork and taking the initiative to succesfully deliver a result.",
-            "fourth": "In my leisure time I enjoy playing video games, fishing, watching videos on youtube and sometimes learning new things such as video editing, Blender, Unreal Engine or modding games in general." 
+            "fourth": "In my leisure time I enjoy playing video games, fishing, watching videos on youtube. Sometimes I'm learning new things such as video editing, 3D modelling or modding games in general." 
         }
     },
     "skills": {
@@ -58,8 +58,20 @@
             "title": "3 Month Internship Abroad",
             "location": "Turiba University. Riga, Latvia",
             "description": "In this internship I went together with two other KVK students. We were tasked with designing and creating an LMS – Learning Management System prototype from scratch. I was responsible alone for the back-end, designing and creating micro-services. Sometimes I was assisting in the front-end.",
-            "date": "May - July 2024"
-        }
+            "date": "May - July, 2024"
+        },
+        "bipturiba" : {
+            "title": "BIP AI & You Riga 2023",
+            "location": "Turiba University. Riga, Latvia",
+            "description": "Participated in a four day long BIP - Blended Intensive Program about Artificial Intelligence.",
+            "date": "July 3rd - July 7th, 2023"
+        }, 
+        "bipfulda" : {
+            "title": "BIP Creative Coding 2023",
+            "location": "Fulda University of Applied Sciences. Fulda, Germany",
+            "description": "Participated in a BIP - Blended Intensive Program about Creative Coding. The goal of the program was to create an abstract, visual and an interactive project.",
+            "date": "September 18th - December 4th, 2023"
+        } 
     },
     "contactForm": {
         "title": "Contact me",

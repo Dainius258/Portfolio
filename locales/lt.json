@@ -18,7 +18,7 @@
             "first": "aš esu „full-stack“ programuotojas, siekiantis tobulinti savo įgūdžius ir kurti intuityvias, gražias ir svarbiausia - saugias aplikacijas. Šiuo metu esu trečio kurso informatikos studentas Klaipėdos valstybinėje kolegijoje.",
             "second": "Studijų metais daug išmokau atlikdamas įvairius projektus. Nebijojau imtis visiškai naujų dalykų tiek vienas, tiek su kolegomis ir kūriau projektus naudodamas Node.js, Express.js, Nuxt 3, Android Studio, Docker ir kitus įrankius.",
             "third": "Dirbau „Agile“ aplinkoje ir žinau jos pagrindus bei komunikacijos, komandinio darbo ir iniciatyvos svarbą sėkmingui rezultatui pasiekti.",
-            "fourth": "Laisvalaikiu mėgstu žaisti vaizdo žaidimus, žvejoti, žiūrėti vaizdo įrašus „YouTube“ ir kartais mokytis naujų dalykų, tokių kaip vaizdo redagavimo, Blender, Unreal Engine arba žaidimų modifikavimo." 
+            "fourth": "Laisvalaikiu mėgstu žaisti vaizdo žaidimus, žvejoti, žiūrėti vaizdo įrašus „YouTube“, domiuosi automobiliais. Kartais mokausi naujų dalykų, tokių kaip vaizdo įrašų redagavimo, 3D modeliavimo arba žaidimų modifikavimo." 
         }
     },
     "skills": {
@@ -58,8 +58,20 @@
             "title": "3 mėnesių praktika užsienyje",
             "location": "Turiba Universitetas. Ryga, Latvija",
             "description": "Į šia praktika vykau kartu su dviem KVK studentais. Mus paskyrė sukurti LMS – mokymosi valdymo sistemos prototipą nuo nulio. Aš buvau vienintelis atsakingas už back-end dalį, mikroservisų projektavimą ir kūrimą. Kartais padėdavau front-end kūrime.",
-            "date": "Gegužė - Liepa 2024"
-        }
+            "date": "Gegužė - Liepa, 2024"
+        },
+        "bipturiba" : {
+            "title": "BIP AI & You Riga 2023",
+            "location": "Turiba University. Ryga, Latvija",
+            "description": "Dalyvavau keturias dienas trukusiame BIP - Intensyvioje programoje apie dirbtinį intelektą.",
+            "date": "Liepos 3 - Liepos 7, 2023"
+        } ,
+        "bipfulda" : {
+            "title": "BIP Creative Coding 2023",
+            "location": "Fulda University of Applied Sciences. Fulda, Vokietija",
+            "description": "Dalyvavau BIP - Intensyvioje programoje apie kūrybinį programavimą. Programos tikslas buvo sukurti abstraktų, vizualų ir interaktyvų projektą.",
+            "date": "Rugsėjo 18 - Gruodžio 4, 2023"
+        } 
     },
     "contactForm": {
         "title": "Susisiekite",
